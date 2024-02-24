@@ -21,4 +21,4 @@ include(SHARED_PATH . '/salamander-header.php');
 <p><a href="<?= url_for('/salamanders/index.php'); ?>">&laquo; Back to Salamander List</a></p>
 
 <!-- Use the shared path to the salamander footer. -->
-<?php include(SHARED_PATH . '/salamander-header.php'); ?>
+<?php include(SHARED_PATH . '/salamander-footer.php'); ?>

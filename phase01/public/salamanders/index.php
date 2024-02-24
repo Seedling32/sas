@@ -1,4 +1,4 @@
-<?php require('initialize.php');
+<?php require_once('../../private/initialize.php');
 
   // Write a salamanders array with the following
   // id=1, salamanderName = Red-Legged Salamander
