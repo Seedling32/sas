@@ -1,18 +1,15 @@
-<!-- require initialize.php -->
+<?php require('initialize.php');
 
+  // Write a salamanders array with the following
+  // id=1, salamanderName = Red-Legged Salamander
+  // id=2, salamanderName = Pigeon Mountain Salamander
+  // id=3', salamanderName = ZigZag Salamander
+  // id=4,  salamanderName= Slimy Salamander 
 
-<!-- 
-  Write a salamanders array with the following
-id=1, salamanderName = Red-Legged Salamander
-id=2, salamanderName = Pigeon Mountain Salamander
-id=3', salamanderName = ZigZag Salamander
-id=4,  salamanderName= Slimy Salamander 
--->
-
-
-
-<!-- Add the pageTitle for salamanders
-Include a shared path to the salamander header -->
+  // Add the pageTitle for salamanders
+  // Include a shared path to the salamander header
+  $pageTitle = 'Salamander: Types';
+  include(SHARED_PATH.'/salamander-header.php');
 
 ?>
 
@@ -40,4 +37,9 @@ Include a shared path to the salamander header -->
       <?php } ?>
   	</table>
 
-<!-- <?php add the shared path to the salamander footer ?> -->
+<?
+  // php add the shared path to the salamander footer 
+  include(SHARED_PATH . '/salamander-footer.php');
+
+
+?>

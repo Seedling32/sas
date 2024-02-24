@@ -1,6 +1,6 @@
 <?php
 
-function urlFor($script_path) {
+function url_For($script_path) {
   // add the leading '/' if not present
   if($script_path[0] != '/') {
     $script_path = "/" . $script_path;
