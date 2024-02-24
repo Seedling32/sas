@@ -37,7 +37,7 @@
         <tr>
           <td><?php echo $salamander['id']; ?></td>
     	    <td><?php echo $salamander['salamanderName']; ?></td>
-          <td><a href="<?= url_For('/salamanders/show.php?id=' . $salamander['id']); ?>">View</a></td>
+          <td><a href="<?= url_For('/salamanders/show.php?id=' . h($salamander['id'])); ?>">View</a></td>
           <td><a href="#">Edit</a></td>
           <td><a href="#">Delete</a></td>
     	  </tr>
