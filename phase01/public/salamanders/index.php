@@ -6,6 +6,13 @@
   // id=3', salamanderName = ZigZag Salamander
   // id=4,  salamanderName= Slimy Salamander 
 
+  $salamanders = [
+    ['id' => '1', 'salamanderName' => 'Red-Legged Salamander'],
+    ['id' => '2', 'salamanderName' => 'Pigeon Mountain Salamander'],
+    ['id' => '3', 'salamanderName' => 'ZigZag Salamander'],
+    ['id' => '4', 'salamanderName' => 'Slimy Salamander']
+  ];
+
   // Add the pageTitle for salamanders
   // Include a shared path to the salamander header
   $pageTitle = 'Salamander: Types';
