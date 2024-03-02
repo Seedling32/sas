@@ -9,8 +9,12 @@
          <p><a href=" . url_for('/salamanders/index.php') . ">&laquo; Back to Salamander List</a></p>");
   } 
 
-  else {
+  elseif(is_get_request()) {
     redirect_to(url_for('/salamanders/new.php'));
+  }
+
+  else {
+  redirect_to(url_for('/salamanders/new.php'));
   }
 
 ?>
