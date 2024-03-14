@@ -21,14 +21,14 @@
 
 ?>
 
-<h2>Create A Salamander</h2>
+<h2> Stub for Create A Salamander</h2>
 
-<form action="<?= url_for('/salamanders/create.php'); ?>" method="post">
+<!-- <form action="<?//= url_for('/salamanders/create.php'); ?>" method="post">
   <label for="name">Salamander Name:</label></br>
   <input type="text" id="name" name="name"></br></br>
 
   <input type="submit" value="Create Salamander">
-</form>
+</form> -->
 
 <p><a href="<?= url_for('/salamanders/index.php'); ?>">&laquo; Back to Salamander List</a></p>
 

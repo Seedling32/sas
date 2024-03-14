@@ -20,14 +20,14 @@
 
 ?>
 
-<h2>Edit Salamander</h2>
+<h2> Stub for Edit Salamander</h2>
 
-<form action="<?= url_for('/salamanders/edit.php?id=' . h(u($id))); ?>" method="post">
+<!-- <form action="<?//= url_for('/salamanders/edit.php?id=' . h(u($id))); ?>" method="post">
   <label for="name">Salamander Name:</label></br>
-  <input type="text" id="name" name="name" value="<?php echo $salamanderName; ?>"></br></br>
+  <input type="text" id="name" name="name" value="<?php //echo $salamanderName; ?>"></br></br>
 
   <input type="submit" value="Edit Salamander">
-</form>
+</form> -->
 
 <p><a href="<?= url_for('/salamanders/index.php'); ?>">&laquo; Back to Salamander List</a></p>
 
