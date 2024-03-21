@@ -19,9 +19,9 @@ function find_salamander_by_id($id) {
   $result = mysqli_query($db, $sql);
   confirm_result_set($result);
 
-  $subject = mysqli_fetch_assoc($result);
+  $salamander = mysqli_fetch_assoc($result);
   mysqli_free_result($result);
-  return $subject;
+  return $salamander;
 }
 
 function insert_salamander($salamanderName, $salamanderHabitat, $salamanderDescription) {
@@ -43,6 +43,29 @@ function insert_salamander($salamanderName, $salamanderHabitat, $salamanderDescr
 
   else {
     echo mysqli_errno($db);
+    db_disconnect($db);
+    exit;
+  }
+}
+
+function update_salamander($salamander) {
+  global $db;
+
+  $sql = "UPDATE salamander SET ";
+  $sql .= "name='" . $salamander['name'] . "',";
+  $sql .= "habitat='" . $salamander['habitat'] . "',";
+  $sql .= "description='" . $salamander['description'] . "' ";
+  $sql .= "WHERE id='" . $salamander['id'] . "' ";
+  $sql .= "LIMIT 1";
+
+  $result = mysqli_query($db, $sql);
+
+  if ($result) {
+    return true;
+  } 
+  
+  else {
+    echo mysqli_error($db);
     db_disconnect($db);
     exit;
   }

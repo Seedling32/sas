@@ -1,9 +1,9 @@
 <?php
-  require_once('../../private/initialize.php');
+require_once('../../private/initialize.php');
 
-  $pageTitle = 'Create Salamander';
+$pageTitle = 'Create Salamander';
 
-  include(SHARED_PATH . '/salamander-header.php');
+include(SHARED_PATH . '/salamander-header.php');
 ?>
 
 <h2>Create A Salamander</h2>
@@ -13,6 +13,7 @@
   <input type="text" id="name" name="name"></br>
 
   <label for="habitat">Salamander Habitat:</label>
+  <textarea name="habitat" id="habitat" cols="30" rows="10"></textarea></br>
   <input type="text" id="habitat" name="habitat"></br>
 
   <label for="description">Salamander Description:</label>

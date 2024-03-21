@@ -3,7 +3,7 @@
 
   $id = $_GET['id'] ?? '1'; 
 
-  $subject = find_salamander_by_id($id);
+  $salamander = find_salamander_by_id($id);
 
   $page_title = 'Salamander Details';
   include(SHARED_PATH . '/salamander-header.php');
@@ -18,10 +18,10 @@
     <th>Description</th>
   </tr>
   <tr>
-    <td><?= $subject['id'] ?></td>
-    <td><?= $subject['name'] ?></td>
-    <td><?= $subject['habitat'] ?></td>
-    <td><?= $subject['description'] ?></td>
+    <td><?= $salamander['id'] ?></td>
+    <td><?= $salamander['name'] ?></td>
+    <td><?= $salamander['habitat'] ?></td>
+    <td><?= $salamander['description'] ?></td>
   </tr>
 </table>
 <p> Page ID:<?= h($id); ?></p>
