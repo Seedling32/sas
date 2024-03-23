@@ -1,29 +1,29 @@
 <?php
-require_once('../../private/initialize.php');
+  require_once('../../private/initialize.php');
 
-// $id = $_GET['id'] ?? '1';
+  if (!isset($_GET['id'])) {
+    redirect_to(url_for('/salamanders/index.php'));
+  }
 
-if (!isset($_GET['id'])) {
-  redirect_to(url_for('/salamanders/index.php'));
-}
+  $id = $_GET['id'];
 
-$id = $_GET['id'];
+  if (is_post_request()) {
+    $salamander = [];
+    $salamander['id'] = $id;
+    $salamander['name'] = $_POST['name'] ?? '';
+    $salamander['habitat'] = $_POST['habitat'] ?? '';
+    $salamander['description'] = $_POST['description'] ?? '';
 
-if (is_post_request()) {
-  $salamander = [];
-  $salamander['id'] = $id;
-  $salamander['name'] = $_POST['name'] ?? '';
-  $salamander['habitat'] = $_POST['habitat'] ?? '';
-  $salamander['description'] = $_POST['description'] ?? '';
+    $result = update_salamander($salamander);
+    redirect_to(url_For('/salamanders/show.php?id=' . $id));
+  } 
+  
+  else {
+    $salamander = find_salamander_by_id($id);
+  }
 
-  $result = update_salamander($salamander);
-  redirect_to(url_For('/salamanders/show.php?id=' . $id));
-} else {
-  $salamander = find_salamander_by_id($id);
-}
-
-$page_title = 'Edit Salamander';
-include(SHARED_PATH . '/salamander-header.php');
+  $page_title = 'Edit Salamander';
+  include(SHARED_PATH . '/salamander-header.php');
 
 ?>
 

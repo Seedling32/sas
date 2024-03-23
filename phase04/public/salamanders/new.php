@@ -1,22 +1,19 @@
 <?php
-require_once('../../private/initialize.php');
-
-$pageTitle = 'Create Salamander';
-
-include(SHARED_PATH . '/salamander-header.php');
+  require_once('../../private/initialize.php');
+  include(SHARED_PATH . '/salamander-header.php');
+  $pageTitle = 'Create Salamander';
 ?>
 
 <h2>Create A Salamander</h2>
 
-<form action="<?= url_for('/salamanders/create.php'); ?>" method="post">
+<form action="<?= url_for('salamanders/create.php'); ?>" method="post">
   <label for="name">Salamander Name:</label></br>
   <input type="text" id="name" name="name"></br>
 
-  <label for="habitat">Salamander Habitat:</label>
+  <label for="habitat">Salamander Habitat:</label></br>
   <textarea name="habitat" id="habitat" cols="30" rows="10"></textarea></br>
-  <input type="text" id="habitat" name="habitat"></br>
 
-  <label for="description">Salamander Description:</label>
+  <label for="description">Salamander Description:</label></br>
   <textarea name="description" id="description" cols="30" rows="10"></textarea></br>
 
   <input type="submit" value="Create Salamander">
