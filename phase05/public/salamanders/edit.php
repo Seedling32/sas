@@ -35,6 +35,8 @@
 
 <h2>Edit Salamander</h2>
 
+<?php echo display_errors($errors); ?>
+
 <form action="<?= url_for('/salamanders/edit.php?id=' . h(u($id))); ?>" method="post">
   <label for="name">Salamander Name:</label></br>
   <input type="text" id="name" name="name" value="<?php echo $salamander['name']; ?>"></br>

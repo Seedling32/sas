@@ -25,5 +25,6 @@
   require_once('validation_functions_php');
 
   $db = db_connect(); 
+  $errors = [];
 
 ?>
