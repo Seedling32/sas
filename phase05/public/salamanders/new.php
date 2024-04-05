@@ -16,8 +16,6 @@ if (is_post_request()) {
   } else {
     $errors = $result;
   }
-
-  print("<p><a href=" . url_for('/salamanders/index.php') . ">&laquo; Back to Salamander List</a></p>");
 } 
 
 else {
